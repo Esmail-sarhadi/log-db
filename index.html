@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Gateway Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2ecc71;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fffb;
+        }
+
+        tr:hover {
+            background-color: #e8f5e9;
+            transition: background-color 0.3s;
+        }
+
+        .signal-strength {
+            font-weight: bold;
+        }
+
+        .good-signal {
+            color: #2ecc71;
+        }
+
+        .medium-signal {
+            color: #f1c40f;
+        }
+
+        .poor-signal {
+            color: #e74c3c;
+        }
+
+        footer {
+            text-align: center;
+            color: #666;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wi-Fi Gateway Monitor</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gateway-Client</th>
+                    <th>Wi-Fi Name</th>
+                    <th>MAC Address</th>
+                    <th>Security</th>
+                    <th>Signal (dB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>gw3-c5</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-60</td>
+                </tr>
+                <tr>
+                    <td>gw5-c1</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-57</td>
+                </tr>
+                <tr>
+                    <td>gw5-c2</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-59</td>
+                </tr>
+                <tr>
+                    <td>gw3-c4</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-57</td>
+                </tr>
+                <tr>
+                    <td>gw2-c1</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-60</td>
+                </tr>
+                <tr>
+                    <td>gw4-c2</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-59</td>
+                </tr>
+                <tr>
+                    <td>gw3-c3</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-57</td>
+                </tr>
+                <tr>
+                    <td>gw2-c2</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-56</td>
+                </tr>
+                <tr>
+                    <td>gw4-c1</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-56</td>
+                </tr>
+                <tr>
+                    <td>gw5-c3</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-57</td>
+                </tr>
+                <tr>
+                    <td>gw4-c1</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-58</td>
+                </tr>
+                <tr>
+                    <td>gw4-c3</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td/rangeWPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-58</td>
+                </tr>
+                <tr>
+                    <td>gw3-c2</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-55</td>
+                </tr>
+                <tr>
+                    <td>gw2-c4</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength medium-signal">-58</td>
+                </tr>
+                <tr>
+                    <td>gw2-c5</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-53</td>
+                </tr>
+                <tr>
+                    <td>gw6-c3</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength poor-signal">-65</td>
+                </tr>
+                <tr>
+                    <td>gw3-c1</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength poor-signal">-63</td>
+                </tr>
+                <tr>
+                    <td>gw2-c3</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-54</td>
+                </tr>
+                <tr>
+                    <td>gw6-c2</td>
+                    <td>04FS_2baf78</td>
+                    <td>bc:c0:0f:2b:af:78</td>
+                    <td>WPA2PSK (AES)</td>
+                    <td class="signal-strength good-signal">-57</td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            Generated on April 08, 2025 | Wi-Fi Gateway Monitoring System
+        </footer>
+    </div>
+</body>
+</html>
